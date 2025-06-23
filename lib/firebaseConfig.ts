@@ -1,12 +1,19 @@
-import { initializeApp } from "firebase/app";
+import { initializeApp } from "firebase/app"
+import { getAuth } from "firebase/auth"
+import { getFirestore } from "firebase/firestore"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDxeWhhCeBkb5Y4Gu2a68Sry-zxX_Q62b4",
-  authDomain: "falta-unov2.firebaseapp.com",
-  projectId: "falta-unov2",
-  storageBucket: "falta-unov2.firebasestorage.app",
-  messagingSenderId: "431264435367",
-  appId: "1:431264435367:web:154aa4c2c511ce18b89f82"
-};
+  apiKey: "AIzaSyDxvehhCekbK5Y4Gu2a86Sry-zxX_Q62b4",
+  authDomain: "falta-uno-v2.firebaseapp.com",
+  projectId: "falta-uno-v2",
+  storageBucket: "falta-uno-v2.appspot.com",
+  messagingSenderId: "431426445367",
+  appId: "1:431426445367:web:15a4ad2c5211ce18b89f82"
+}
 
-export const app = initializeApp(firebaseConfig);
+// Inicializa la app
+const app = initializeApp(firebaseConfig)
+
+// ✅ Exportá las instancias necesarias
+export const auth = getAuth(app)
+export const db = getFirestore(app)
